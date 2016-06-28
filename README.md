@@ -1,5 +1,7 @@
 # TiffJeff-Web
 
+I used this: http://www.clock.co.uk/blog/a-simple-website-in-node-js-2016-edition to come up with the frame of the website. I've never used Node.js so i'm just tryna learn. 
+
 Wedding Theme Colors - #FF6B5F, #164883
 
 
@@ -26,3 +28,5 @@ Pages -
           the first idea might be simpler. 
           
   Our Travels - She will give us an embed link to a map she's making with the places they've been + photos.
+  
+  
