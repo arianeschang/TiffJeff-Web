@@ -12,28 +12,38 @@ body
   font-family 'Source Code Pro', monospace
 
 .header
-  background url('https://images.unsplash.com/photo-1451337516015-6b6e9a44a8a3?crop=entropy&fit=crop&fm=jpg&h=975&ixjsv=2.1.0&ixlib=rb-0.3.5&q=80&w=1925')
-  background-position center
+  background url('http://i.imgur.com/bdcN0ns.jpg')
+  overflow-y hidden 
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 700px
 
   .page-title
+    position:absolute;
+    bottom:100 px;
     font-weight 200
     font-size 80px
-    text-align center
-    padding 100px
+    text-align right
+    padding 25px
     text-transform uppercase
     color #fff
     font-family 'Poiret One'
 
   .page-subtitle
+    position:absolute;
+    bottom:0px;
     font-weight 100
     font-size 40px
-    text-align center
-    padding 100px
+    text-align right
+    padding 25px
     text-transform uppercase
     color #fff
 
+
+
 .nav
-  background #000
+  background #FFF
   text-align center
 
   li
@@ -42,7 +52,7 @@ body
   a
     display inline-block
     padding 20px
-    color #fff
+    color #000
     text-decoration none
 
     &:hover
