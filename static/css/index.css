@@ -12,7 +12,6 @@ body {
 }
 .header {
   background: url("http://i.imgur.com/bdcN0ns.jpg");
-  overflow-y: hidden;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -39,19 +38,23 @@ body {
   text-transform: uppercase;
   color: #fff;
 }
+.sidebar,
 .nav {
-  background: #fff;
+  background: #000;
   text-align: center;
 }
+.sidebar li,
 .nav li {
   display: inline-block;
 }
+.sidebar a,
 .nav a {
   display: inline-block;
   padding: 20px;
-  color: #000;
+  color: #fff;
   text-decoration: none;
 }
+.sidebar a:hover,
 .nav a:hover {
   background-color: #3ab795;
   text-decoration: underline;
