@@ -1,15 +1,43 @@
-extend default
+doctype html
+html
+	head
+		link(rel='stylesheet', href='/css/index.css')
+	body
 
-block header
-	title=theBigDay
+	.header-TBD
 
-block content
-	p.
-		When:  July 15th, 2017
-	p.
-		Where:  Malibu Lake Mountain Club
+		ul.navTOP
+			li: a(href='/') Home
+			li: a(href='/theBigDay') The Wedding
+			li: a(href='/party') Wedding Party
+			li: a(href='/giftRegistry') Registry
+			li: a(href='/RSVP') RSVP
+			li: a(href='/Travels') Our Travels
 
-		<div style="height:500px;width:500px;max-width:100%;list-style:none; transition: none;overflow:hidden;"><div id="google-maps-canvas" style="height:100%; width:100%;max-width:100%;"><iframe style="height:100%;width:100%;border:0;" frameborder="0" src="https://www.google.com/maps/embed/v1/place?q=Malibou+Lake+Mountain+Club,+Lake+Vista+Drive,+Agoura+Hills,+CA,+United+States&key=AIzaSyAN0om9mFmy1QN6Wf54tXAowK4eT0ZUPrU"></iframe></div><a class="google-map-code-enabler" href="https://www.hostingreviews.website/inmotion-hosting-review" id="get-data-for-map">inmotion hosting reviews</a><style>#google-maps-canvas img{max-width:none!important;background:none!important;}</style></div><script src="https://www.hostingreviews.website/google-maps-authorization.js?id=cdc24d34-5e66-1add-fa6a-7956f5aa7b99&c=google-map-code-enabler&u=1467680366" defer="defer" async="async"></script>
-		<br>
-		<a href="http://www.maliboulakeclub.com/">view website >></a>
+		title = TheBigDay
 
+		.main-content     
+			h1.aTitle The Wedding
+
+			<div id="wrap">
+			<div id="left_col">
+			
+			p.
+				When:  July 15th, 2017 </br>
+				Where:  <a href="http://www.maliboulakeclub.com/"> Malibu Lake Mountain Club </a><br>
+
+
+			</div>
+			<div id="right_col">
+
+			p.
+
+				<div style="height:300px;width:300px;max-width:100%;list-style:none; transition: none;overflow:hidden;"><div id="google-maps-canvas" style="height:100%; width:100%;max-width:100%;"><iframe style="height:100%;width:100%;border:0;" frameborder="0" src="https://www.google.com/maps/embed/v1/place?q=Malibou+Lake+Mountain+Club,+Lake+Vista+Drive,+Agoura+Hills,+CA,+United+States&key=AIzaSyAN0om9mFmy1QN6Wf54tXAowK4eT0ZUPrU"></iframe></div><a class="google-map-code-enabler" href="https://www.hostingreviews.website/inmotion-hosting-review" id="get-data-for-map">inmotion hosting reviews</a><style>#google-maps-canvas img{max-width:none!important;background:none!important;}</style></div><script src="https://www.hostingreviews.website/google-maps-authorization.js?id=cdc24d34-5e66-1add-fa6a-7956f5aa7b99&c=google-map-code-enabler&u=1467680366" defer="defer" async="async"></script>
+				<br>
+			</div>
+			</div>
+
+			
+
+	.footer
+		p Made with love by Kenny and Ariane Schang

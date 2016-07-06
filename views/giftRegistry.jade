@@ -1,11 +1,34 @@
-extend default
+doctype html
+html
+	head
+		link(rel='stylesheet', href='/css/index.css')
+	body
 
-block header
-	title=theBigDay
+	.header
 
-block content
-	p.
-		<ul>
-			<li><a href="http://www.amazon.com">Registry link 1</a></li>
-			<li><a href="http://www.target.com">Registry link 2</a></li>
-		</ul>
+		ul.navTOP
+			li: a(href='/') Home
+			li: a(href='/theBigDay') The Wedding
+			li: a(href='/party') Wedding Party
+			li: a(href='/giftRegistry') Gift Registry
+			li: a(href='/RSVP') RSVP
+			li: a(href='/Travels') Our Travels
+
+		title = The Gift Registry
+
+		.main-content     
+			h1.aTitle Registry
+
+			p.
+				What we want most for our wedding is to have all of our friends and family there to celebrate the occasion with us, and so, more than anything we would simply enjoy your presence. (We mean it!) That said, we also enjoy dishware and shiny new four-slice toasters too, so if you really would like to get us something, you can find some suggestions here: (THIS TEXT IS EXTREMELY PLAGIARIZED MUST CHANGE)
+
+			.button
+				<a href="#" class="action-button shadow animate blue">Target</a>
+				<a href="#" class="action-button shadow animate blue">Amazon</a>
+
+
+
+			
+
+	.footer
+		p Made with love by Kenny and Ariane Schang
