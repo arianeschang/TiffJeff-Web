@@ -26,7 +26,7 @@ body
   position: relative;
 
   .page-title
-    position:fixed;
+    position:absolute;
     right: 10%
     top: 35%
     font-size 80px
@@ -37,7 +37,7 @@ body
     transform: rotate(-6deg);
 
   .page-subtitle
-    position:fixed;
+    position:absolute;
     font-size 35px
     right: 23%
     top: 54%
@@ -45,12 +45,38 @@ body
     font-family 'Raleway'
 
   .page-sub-subtitle
-    position:fixed;
+    position:absolute;
     font-size 18px
     right: 25%
     top: 50%
     color #fff
     font-family 'Raleway'
+
+  .button
+    text-align center
+    font-family 'Raleway'
+    position absolute
+    padding-right 30px
+    padding-left 30px
+    padding-top 5px
+    padding-bottom 5px
+    right: 25%
+    top: 65%
+    background-color rgba(255, 107, 95, 0.5)    
+    border-radius: 20%;
+
+    li
+      display inline-block
+
+    a
+      display inline-block
+      color #FFF
+      font-size 30px
+      font-family 'Parisienne'
+      text-decoration:none
+
+
+
 
 .header-TBD
   background url('http://michellejohnsonphotography.com/blog/wp-content/uploads/2014/06/06maliboulakemountainclubweddingpictures.jpg')
@@ -76,9 +102,16 @@ body
   .img-circle 
       display: block
       float left
-      border-radius: 50%;
+      border-radius: 40%;
       max-width 500px
       padding 20px
+
+.transbox 
+    background-color: #ffffff
+    border: 3px solid black
+    opacity: 0.6  
+    margin 6px
+    padding: 10px 10px 10px 10px;
 
   p
     color rgb(84, 66, 66)
@@ -99,6 +132,17 @@ body
    width:40%;
 }
 
+.ourStory
+  width:75%
+  margin:0 auto
+  padding-bottom 20px
+  padding-top 20px
+
+  p
+    color rgb(84, 66, 66)
+    font-size 14px
+    font-family 'Raleway'
+    margin:0 auto
 
 
 
@@ -109,6 +153,8 @@ body
   position fixed
   bottom: 0px
   width 100%
+
+
 
   li
     display inline-block
@@ -122,6 +168,7 @@ body
     &:hover
       background-color rgba(255, 107, 95, 0.5)
       text-decoration underline
+
 
 
 .navTOP
