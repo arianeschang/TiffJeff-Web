@@ -50,9 +50,10 @@ body {
   color: #fff;
   font-family: 'Raleway';
 }
-.header-homepage .button {
+.header-homepage .button2 {
   text-align: center;
   font-family: 'Raleway';
+  color: #ff6b5f;
   position: absolute;
   padding-right: 30px;
   padding-left: 30px;
@@ -60,18 +61,12 @@ body {
   padding-bottom: 5px;
   right: 25%;
   top: 65%;
-  background-color: rgba(255,107,95,0.5);
-  border-radius: 20%;
+  background-color: #fff;
+  border: 3px solid #ff6b5f;
+  border-radius: 40%;
 }
-.header-homepage .button li {
+.header-homepage .button2 li {
   display: inline-block;
-}
-.header-homepage .button a {
-  display: inline-block;
-  color: #fff;
-  font-size: 30px;
-  font-family: 'Parisienne';
-  text-decoration: none;
 }
 .header-TBD {
   background: url("http://michellejohnsonphotography.com/blog/wp-content/uploads/2014/06/06maliboulakemountainclubweddingpictures.jpg");

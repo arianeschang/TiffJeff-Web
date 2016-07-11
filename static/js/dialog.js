@@ -2,13 +2,17 @@
   $(function() {
     $( "#dialog" ).dialog({
       autoOpen: false,
+      modal:true,
+      resizable:false,
+      width:400,
+      height:400,
       show: {
-        effect: "blind",
-        duration: 1000
+        effect: "fade",
+        duration: 100
       },
       hide: {
-        effect: "explode",
-        duration: 1000
+        effect: "fade",
+        duration: 100
       }
     });
  
