@@ -59,13 +59,31 @@ body {
   padding-left: 30px;
   padding-top: 5px;
   padding-bottom: 5px;
-  right: 25%;
+  right: 30%;
   top: 65%;
   background-color: #fff;
   border: 3px solid #ff6b5f;
   border-radius: 40%;
 }
 .header-homepage .button2 li {
+  display: inline-block;
+}
+.header-homepage .button3 {
+  text-align: center;
+  font-family: 'Raleway';
+  color: #ff6b5f;
+  position: absolute;
+  padding-right: 30px;
+  padding-left: 30px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  right: 15%;
+  top: 65%;
+  background-color: #fff;
+  border: 3px solid #ff6b5f;
+  border-radius: 40%;
+}
+.header-homepage .button3 li {
   display: inline-block;
 }
 .header-TBD {
