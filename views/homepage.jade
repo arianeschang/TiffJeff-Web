@@ -7,6 +7,14 @@ html
     script(src='//code.jquery.com/ui/1.11.4/jquery-ui.js')
     script(src='/js/dialog.js')
 
+    script.
+        function openNav(name) {
+          document.getElementById(name).style.width = "60%";
+          }
+          function closeNav(name) {
+          document.getElementById(name).style.width = "0%";
+          }
+
   body
 
 
@@ -15,24 +23,31 @@ html
         h5.page-sub-subtitle are getting married
         h3.page-subtitle 07 &bull; 15 &bull; 2017
 
-        div#buttons
-          .btn.btn2(id="our_story") Our Story
-          .btn.btn3(id="about_us") About Us
+        a.btn.btn2(onclick='openNav("ourStory")') Our Story
+        a.btn.btn3(onclick='openNav("aboutUs")') About Us
 
-
-        div#our_story_dialog(title="How we met")
-            p He didn’t even have to leave his couch...  
-            p Our story began June 2011 at 6531 Del Playa in Isla Vista, UCSB.  Lisa (bridesmaid) lived downstairs and wanted to introduce Tiffanie to her upstairs neighbors.  Tiffanie knocked on apartment 5’s door and was introduced to Kevin, Sean, Tyler, Brad and. of course, Jeffrey.  Tiffanie, a rising Junior, and Jeffrey, a rising Senior, instantly clicked.  They discussed their love for volleyball and their passion for education.  The apartment 5 boys were all heading downtown in Santa Barbara so they rushed out the door to catch Bill’s Bus.  Unfortunately, Tiffanie was not yet 21 and therefore had to decline Jeffrey’s invitation to join them.  Once everyone left, Jeffrey rushed back through the door to ask Tiffanie for her number to play volleyball together.  And the rest is history…
-        
-        div#about_us_dialog(title="A little about us")
-            p Tiffanie Eliane Christiane Schang was born and raised in Paris, France.  
-            p Jeffrey Steven Gilder was born and raised in Los Angeles. 
-            p Tiffanie is the daughter of engineers Denise and Thierry Schang.  Tiffanie has a younger sister Ariane (bridesmaid) and an older brother Kenny (groomsman).  They moved to Mountain View when Tiffanie was seven years old. 
-            p Jeffrey is the son of Tom and Lori Gilder and has a younger sister, Jenna (bridesmaid).  
-            p Together, Jeffrey and Tiffanie are passionate teachers, volleyball players and world travelers.  
-            p Jeffrey is currently the alumni director at Windward and teaching 7th grade US history while Tiffanie is teaching 6th grade at the rival school, Brentwood. 
-            p Jeffrey popped the question May 2016 on the beach of Paradise Cove and celebrated with a hot air balloon ride in Santa Barbara. 
-            p Jeffrey and Tiffanie are thrilled to share this special day with friends and family.
+        #ourStory.overlay
+            a.closebtn(href='javascript:void(0)', onclick='closeNav("ourStory")') &times;
+              |             
+              .overlay-content
+                h1 Our Story
+                p He didn’t even have to leave his couch...  
+                p Our story began June 2011 at 6531 Del Playa in Isla Vista, UCSB.  Lisa (bridesmaid) lived downstairs and wanted to introduce Tiffanie to her upstairs neighbors.  Tiffanie knocked on apartment 5’s door and was introduced to Kevin, Sean, Tyler, Brad and. of course, Jeffrey.  Tiffanie, a rising Junior, and Jeffrey, a rising Senior, instantly clicked.  They discussed their love for volleyball and their passion for education.  The apartment 5 boys were all heading downtown in Santa Barbara so they rushed out the door to catch Bill’s Bus.  Unfortunately, Tiffanie was not yet 21 and therefore had to decline Jeffrey’s invitation to join them.  Once everyone left, Jeffrey rushed back through the door to ask Tiffanie for her number to play volleyball together.  And the rest is history…
+            
+         #aboutUs.overlay
+            a.closebtn(href='javascript:void(0)', onclick='closeNav("aboutUs")') &times;
+              |             
+              .overlay-content
+               p Tiffanie Eliane Christiane Schang was born and raised in Paris, France.  
+                p Jeffrey Steven Gilder was born and raised in Los Angeles. 
+                p Tiffanie is the daughter of engineers Denise and Thierry Schang.  Tiffanie has a younger sister Ariane (bridesmaid) and an older brother Kenny (groomsman).  They moved to Mountain View when Tiffanie was seven years old. 
+                p Jeffrey is the son of Tom and Lori Gilder and has a younger sister, Jenna (bridesmaid).  
+                p Together, Jeffrey and Tiffanie are passionate teachers, volleyball players and world travelers.  
+                p Jeffrey is currently the alumni director at Windward and teaching 7th grade US history while Tiffanie is teaching 6th grade at the rival school, Brentwood. 
+                p Jeffrey popped the question May 2016 on the beach of Paradise Cove and celebrated with a hot air balloon ride in Santa Barbara. 
+                p Jeffrey and Tiffanie are thrilled to share this special day with friends and family.
+            
+            
       ul.nav
         li: a(href='/') Home
         li: a(href='/theBigDay') The Wedding
