@@ -50,49 +50,73 @@ body {
   color: #fff;
   font-family: 'Raleway';
 }
-.header-homepage .button2 {
-  text-align: center;
-  font-family: 'Raleway';
-  color: #ff6b5f;
+.header-homepage .btn {
+  color: #164883;
+  border: 3px solid rgba(22,72,131,0.5);
+  background: rgba(255,255,255,0.5);
+  cursor: pointer;
+  display: block;
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 45px;
+  margin: 0 auto 2em;
+  max-width: 160px;
   position: absolute;
-  padding-right: 30px;
-  padding-left: 30px;
-  padding-top: 5px;
-  padding-bottom: 5px;
-  right: 30%;
   top: 65%;
-  background-color: #fff;
-  border: 3px solid #ff6b5f;
-  border-radius: 40%;
+  text-decoration: none;
+  text-transform: uppercase;
+  vertical-align: middle;
+  text-align: center;
+  width: 100%;
+  letter-spacing: 0;
+  font-family: 'Raleway';
 }
-.header-homepage .button2 li {
+.header-homepage .btn:hover,
+.header-homepage .btn:active {
+  letter-spacing: 3px;
+}
+.header-homepage .btn:after,
+.header-homepage .btn:before {
+  backface-visibility: hidden;
+  border: 1px solid rgba(255,255,255,0);
+  bottom: 0px;
+  content: " ";
+  display: block;
+  margin: 0 auto;
+  position: relative;
+  transition: all 280ms ease-in-out;
+  width: 0;
+}
+.header-homepage .btn:hover:after,
+.header-homepage .btn:hover:before {
+  backface-visibility: hidden;
+  border-color: #fff;
+  transition: width 350ms ease-in-out;
+  width: 70%;
+}
+.header-homepage .btn:hover:before {
+  bottom: auto;
+  top: 0;
+  width: 70%;
+}
+.header-homepage .btn2 {
+  right: 35%;
+}
+.header-homepage .btn2 li {
   display: inline-block;
 }
-.header-homepage .button3 {
-  text-align: center;
-  font-family: 'Raleway';
-  color: #ff6b5f;
-  position: absolute;
-  padding-right: 30px;
-  padding-left: 30px;
-  padding-top: 5px;
-  padding-bottom: 5px;
+.header-homepage .btn3 {
   right: 15%;
-  top: 65%;
-  background-color: #fff;
-  border: 3px solid #ff6b5f;
-  border-radius: 40%;
 }
-.header-homepage .button3 li {
+.header-homepage .btn3 li {
   display: inline-block;
 }
-.header-wedding {
+.header-TBD {
   background: url("http://michellejohnsonphotography.com/blog/wp-content/uploads/2014/06/06maliboulakemountainclubweddingpictures.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  min-height: 700px;
-  overflow: hidden;
+  height: 700px;
 }
 .main-content {
   width: 75%;
@@ -100,9 +124,6 @@ body {
   margin: 25px auto;
   align: center;
   margin-bottom: -10px;
-  overflow: hidden;
-}
-.header-hotels {
   overflow: hidden;
 }
 .main-content .aTitle {
@@ -151,9 +172,6 @@ p {
   float: middle;
   margin: 0 auto;
 }
-#buttons {
-  overflow: hidden;
-}
 #left_col {
   float: left;
   width: 50%;
@@ -177,7 +195,6 @@ p {
 #wrapUneven {
   width: 75%;
   margin: 0 auto;
-  overflow: hidden;
 }
 #left_colU {
   float: left;
