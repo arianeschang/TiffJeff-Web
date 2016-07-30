@@ -1,8 +1,350 @@
-extend default
+doctype html
+html
+  head
+    link(rel='stylesheet', href='/css/index.css')
 
-block header
-	title=theBigDay
+    meta(charset='utf-8')
+    link(rel='stylesheet', href='css/demo.css', type='text/css', media='screen')
+    link(rel='stylesheet', href='css/demo-print.css', type='text/css', media='print')
+    script(src='js/raphael_2.0.2.js', type='text/javascript')
+    script(src='js/world_570.js', type='text/javascript')
 
-block content
-	p.
-		<iframe src="https://www.google.com/maps/d/embed?mid=14_BPo_JlzUGO3cTVNxkWApiUQFQ" width="640" height="480"></iframe>
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    link(rel='stylesheet', href='http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css')
+    script(src='https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js')
+    script(src='http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js')
+    style.
+      .carousel-inner > .item > img,
+      .carousel-inner > .item > a > img {
+      width: 300px;
+      height: 300px
+      margin: auto;
+      }
+
+
+    script(type='text/javascript').
+      window.onload = function () {
+      var current = null;
+      var map = {};
+      var m = {};
+      var attr = {
+      fill: "#333",
+      stroke: "#888",
+      "stroke-width": .5,
+      "stroke-linejoin": "round"
+      };
+      var map = {};
+      var R = Raphael("holder_570");
+      render_map(R,map,attr);
+      for (var state in map) {
+      map[state].color = Raphael.getColor();
+      (function (st, state) {
+      st[0].onmouseover = function () {
+      current && map[current].animate({fill: "#333", stroke: "#666"}, 300);
+      st.animate({fill: st.color, stroke: "#ccc"}, 300);
+      R.safari();
+      current = state;
+      };
+      
+      
+      })(map[state], state);
+      }; // end for
+      function lon2x(lon) {
+      var xfactor = 1.5255;
+      var xoffset = 263.58;
+      var x = (lon * xfactor) + xoffset;
+      return x;
+      }
+      function lat2y(lat) {
+      var yfactor = -1.5255;
+      var yoffset = 130.5;
+      var y = (lat * yfactor) + yoffset;
+      return y;
+      }
+      var city_attr = {
+      fill: "#0f0",
+      stroke: "none",
+      opacity: .3
+      };
+      function plot(lat,lon,size) {
+      size = size * .5 + 4;
+      return R.circle(lon2x(lon), lat2y(lat), size).attr(city_attr);
+      }
+      var cities = {};
+
+
+
+      cities.China = plot(38,113.921327,3);
+      cities.Prague = plot(50,15,3);
+      cities.Amsterdam = plot(52,7,3);
+      cities.France = plot(46,3,3);
+      cities.Canada = plot(55,-110,1);
+      cities.USNationalParks = plot(40,-110,3);
+      cities.Hawaii = plot(20,-160,3);
+
+
+
+      var current_city = null;
+      var lastCity = null;
+      var city_box = null;
+      for (var city in cities) {
+      map[state].color = Raphael.getColor();
+      (function (st, city) {
+      st[0].style.cursor = "pointer";
+      st[0].onmouseover = function () {
+      current_city && cities[current_city].animate({fill: "#0f0", opacity: .3}, 300);
+      st.animate({fill: "#0f0", opacity: 1}, 300);
+      if (t = document.getElementById(lastCity)) { t.style.display = "none"; }
+      if (t = document.getElementById(city)) { t.style.display = "block"; }
+      city_box = city;
+      R.safari();
+      current_city = city;
+      };
+      st[0].onmouseout = function () {
+      st.animate({fill: "#0f0", opacity: .3}, 300);
+      lastCity = city_box
+      R.safari();
+      };
+      st[0].onclick = function () {
+      if (t = document.getElementById(city_box)) { t.style.display = "none"; }
+      if (t = document.getElementById(city)) { t.style.display = "block"; }
+      city_box = city;
+      };
+
+
+
+      if (t = document.getElementById(city)) {
+      t.style.left = cities[city].attr('cx') + 'px';
+      t.style.top = cities[city].attr('cy') -20 + 'px';
+      }
+      })(cities[city], city);
+      }; // end for
+      };
+
+
+  body
+
+  .header
+    ul.navTOP
+      li: a(href='/') Home
+      li: a(href='/theBigDay') The Wedding
+      li: a(href='/party') Wedding Party
+      li: a(href='/giftRegistry') Registry
+      li: a(href='/RSVP') RSVP
+      li: a(href='/Travels') Our Travels
+
+
+ .main-content  
+    h1.aTitle Our Travels 
+
+    #holder_570(style='position:relative;')
+      #China.city_hover
+        span.c_label
+          strong China
+            #myCarousel.carousel.slide(data-ride='carousel')
+              // Indicators
+              ol.carousel-indicators
+                li.active(data-target='#myCarousel', data-slide-to='0')
+                li(data-target='#myCarousel', data-slide-to='1')
+                li(data-target='#myCarousel', data-slide-to='2')
+                li(data-target='#myCarousel', data-slide-to='3')
+              // Wrapper for slides
+              .carousel-inner(role='listbox')
+                .item.active
+                  img(src='photos/China1.jpeg')
+                .item
+                  img(src='photos/china2.jpeg')
+                .item
+                  img(src='photos/china3.jpeg')
+                .item
+                  img(src='photos/chinaKiss.jpeg')
+                .item
+                  img(src='photos/chinaWall.jpeg')
+              // Left and right controls
+              a.left.carousel-control(href='#myCarousel', role='button', data-slide='prev')
+                span.glyphicon.glyphicon-chevron-left(aria-hidden='true')
+                span.sr-only Previous
+              a.right.carousel-control(href='#myCarousel', role='button', data-slide='next')
+                span.glyphicon.glyphicon-chevron-right(aria-hidden='true')
+                span.sr-only Next       
+
+
+      #Prague.city_hover
+        span.c_label
+          strong Prague
+            #myCarousel1.carousel.slide(data-ride='carousel')
+              // Indicators
+              ol.carousel-indicators
+                li.active(data-target='#myCarousel1', data-slide-to='0')
+                li(data-target='#myCarousel1', data-slide-to='1')
+                li(data-target='#myCarousel1', data-slide-to='2')
+                li(data-target='#myCarousel1', data-slide-to='3')
+              // Wrapper for slides
+              .carousel-inner(role='listbox')
+                .item.active
+                  img(src='photos/China1.jpeg')
+                .item
+                  img(src='photos/china2.jpeg')
+                .item
+                  img(src='photos/china3.jpeg')
+                .item
+                  img(src='photos/chinaKiss.jpeg')
+                .item
+                  img(src='photos/chinaWall.jpeg')
+              // Left and right controls
+              a.left.carousel-control(href='#myCarousel1', role='button', data-slide='prev')
+                span.glyphicon.glyphicon-chevron-left(aria-hidden='true')
+                span.sr-only Previous
+              a.right.carousel-control(href='#myCarousel1', role='button', data-slide='next')
+                span.glyphicon.glyphicon-chevron-right(aria-hidden='true')
+                span.sr-only Next  
+      #Amsterdam.city_hover
+        span.c_label
+          strong Amsterdam
+            #myCarousel2.carousel.slide(data-ride='carousel')
+              // Indicators
+              ol.carousel-indicators
+                li.active(data-target='#myCarousel2', data-slide-to='0')
+                li(data-target='#myCarousel2', data-slide-to='1')
+                li(data-target='#myCarousel2', data-slide-to='2')
+                li(data-target='#myCarousel2', data-slide-to='3')
+              // Wrapper for slides
+              .carousel-inner(role='listbox')
+                .item.active
+                  img(src='photos/China1.jpeg')
+                .item
+                  img(src='photos/china2.jpeg')
+                .item
+                  img(src='photos/china3.jpeg')
+                .item
+                  img(src='photos/chinaKiss.jpeg')
+                .item
+                  img(src='photos/chinaWall.jpeg')
+              // Left and right controls
+              a.left.carousel-control(href='#myCarousel2', role='button', data-slide='prev')
+                span.glyphicon.glyphicon-chevron-left(aria-hidden='true')
+                span.sr-only Previous
+              a.right.carousel-control(href='#myCarousel2', role='button', data-slide='next')
+                span.glyphicon.glyphicon-chevron-right(aria-hidden='true')
+                span.sr-only Next  
+      #France.city_hover
+        span.c_label
+          strong France
+            #myCarousel3.carousel.slide(data-ride='carousel')
+              // Indicators
+              ol.carousel-indicators
+                li.active(data-target='#myCarousel3', data-slide-to='0')
+                li(data-target='#myCarousel3', data-slide-to='1')
+                li(data-target='#myCarousel3', data-slide-to='2')
+                li(data-target='#myCarousel3', data-slide-to='3')
+              // Wrapper for slides
+              .carousel-inner(role='listbox')
+                .item.active
+                  img(src='photos/China1.jpeg')
+                .item
+                  img(src='photos/china2.jpeg')
+                .item
+                  img(src='photos/china3.jpeg')
+                .item
+                  img(src='photos/chinaKiss.jpeg')
+                .item
+                  img(src='photos/chinaWall.jpeg')
+              // Left and right controls
+              a.left.carousel-control(href='#myCarousel3', role='button', data-slide='prev')
+                span.glyphicon.glyphicon-chevron-left(aria-hidden='true')
+                span.sr-only Previous
+              a.right.carousel-control(href='#myCarousel3', role='button', data-slide='next')
+                span.glyphicon.glyphicon-chevron-right(aria-hidden='true')
+                span.sr-only Next  
+      #Canada.city_hover
+        span.c_label
+          strong Canada, Alberta
+            #myCarousel4.carousel.slide(data-ride='carousel')
+              // Indicators
+              ol.carousel-indicators
+                li.active(data-target='#myCarousel4', data-slide-to='0')
+                li(data-target='#myCarousel4', data-slide-to='1')
+                li(data-target='#myCarousel4', data-slide-to='2')
+                li(data-target='#myCarousel4', data-slide-to='3')
+              // Wrapper for slides
+              .carousel-inner(role='listbox')
+                .item.active
+                  img(src='photos/China1.jpeg')
+                .item
+                  img(src='photos/china2.jpeg')
+                .item
+                  img(src='photos/china3.jpeg')
+                .item
+                  img(src='photos/chinaKiss.jpeg')
+                .item
+                  img(src='photos/chinaWall.jpeg')
+              // Left and right controls
+              a.left.carousel-control(href='#myCarousel4', role='button', data-slide='prev')
+                span.glyphicon.glyphicon-chevron-left(aria-hidden='true')
+                span.sr-only Previous
+              a.right.carousel-control(href='#myCarousel4', role='button', data-slide='next')
+                span.glyphicon.glyphicon-chevron-right(aria-hidden='true')
+                span.sr-only Next  
+      #USNationalParks.city_hover
+        span.c_label
+          strong US National Parks
+            #myCarousel5.carousel.slide(data-ride='carousel')
+              // Indicators
+              ol.carousel-indicators
+                li.active(data-target='#myCarousel5', data-slide-to='0')
+                li(data-target='#myCarousel5', data-slide-to='1')
+                li(data-target='#myCarousel5', data-slide-to='2')
+                li(data-target='#myCarousel5', data-slide-to='3')
+              // Wrapper for slides
+              .carousel-inner(role='listbox')
+                .item.active
+                  img(src='photos/natlPark1.jpeg')
+                .item
+                  img(src='photos/natlPark2.jpeg')
+                .item
+                  img(src='photos/natlpark3.jpeg')
+                .item
+                  img(src='photos/natlPark4.jpeg')
+                .item
+                  img(src='photos/natlpark5.jpeg')
+              // Left and right controls
+              a.left.carousel-control(href='#myCarousel5', role='button', data-slide='prev')
+                span.glyphicon.glyphicon-chevron-left(aria-hidden='true')
+                span.sr-only Previous
+              a.right.carousel-control(href='#myCarousel5', role='button', data-slide='next')
+                span.glyphicon.glyphicon-chevron-right(aria-hidden='true')
+                span.sr-only Next  
+       #Hawaii.city_hover
+        span.c_label
+          strong Hawaii
+            #myCarousel6.carousel.slide(data-ride='carousel')
+              // Indicators
+              ol.carousel-indicators
+                li.active(data-target='#myCarousel6', data-slide-to='0')
+                li(data-target='#myCarousel6', data-slide-to='1')
+                li(data-target='#myCarousel6', data-slide-to='2')
+                li(data-target='#myCarousel6', data-slide-to='3')
+              // Wrapper for slides
+              .carousel-inner(role='listbox')
+                .item.active
+                  img(src='photos/China1.jpeg')
+                .item
+                  img(src='photos/china2.jpeg')
+                .item
+                  img(src='photos/china3.jpeg')
+                .item
+                  img(src='photos/chinaKiss.jpeg')
+                .item
+                  img(src='photos/chinaWall.jpeg')
+              // Left and right controls
+              a.left.carousel-control(href='#myCarousel6', role='button', data-slide='prev')
+                span.glyphicon.glyphicon-chevron-left(aria-hidden='true')
+                span.sr-only Previous
+              a.right.carousel-control(href='#myCarousel6', role='button', data-slide='next')
+                span.glyphicon.glyphicon-chevron-right(aria-hidden='true')
+                span.sr-only Next  
+      
+
+    .footer
+         p Made with love by Kenny and Ariane Schang
+ 
