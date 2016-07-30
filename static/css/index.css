@@ -111,7 +111,7 @@ body {
 .header-homepage .btn3 li {
   display: inline-block;
 }
-.header-TBD {
+.header-wedding {
   background: url("http://michellejohnsonphotography.com/blog/wp-content/uploads/2014/06/06maliboulakemountainclubweddingpictures.jpg");
   background-size: cover;
   background-repeat: no-repeat;
@@ -119,9 +119,9 @@ body {
   height: 700px;
 }
 .main-content {
-  width: 75%;
+  width: 80%;
   min-height: 600px;
-  margin: 25px auto;
+  margin: 10px auto;
   align: center;
   margin-bottom: -10px;
   overflow: hidden;
@@ -158,17 +158,31 @@ body {
 .transbox {
   background-color: #fff;
   border: 3px solid #000;
-  opacity: 0.6;
+  opacity: 0.7;
   margin: 6px;
   padding: 10px 10px 10px 10px;
 }
-p {
-  color: #544242;
-  font-size: 24px;
+h4 {
+  line-height: 20px;
+  text-align: center;
+  color: #164883;
+  font-size: 22px;
   font-family: 'Raleway';
 }
+p {
+  text-align: center;
+  color: #000;
+  font-size: 18px;
+  font-family: 'Raleway';
+}
+img {
+  margin-left: auto;
+  margin-right: auto;
+  align: center;
+  align: middle;
+}
 #wrap {
-  width: 90%;
+  width: 100%;
   float: middle;
   margin: 0 auto;
 }
@@ -193,7 +207,7 @@ p {
   border-top-width: 0px;
 }
 #wrapUneven {
-  width: 75%;
+  width: 100%;
   margin: 0 auto;
 }
 #left_colU {
@@ -202,7 +216,7 @@ p {
 }
 #right_colU {
   float: right;
-  width: 35%;
+  width: 40%;
 }
 .ourStory {
   width: 75%;
