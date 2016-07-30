@@ -2,6 +2,14 @@ doctype html
 html
 	head
 		link(rel='stylesheet', href='/css/index.css')
+
+		script.
+			function openDiv(name) {
+				document.getElementById(name).style.display = 'block'
+			}
+			function closeDiv(name) {
+				document.getElementById(name).style.display = 'none'
+			}
 	body
 
 	.header
@@ -19,28 +27,37 @@ html
 	.main-content     
 		h1.aTitle The Wedding Party
 
-		<div id="wrap">
+		.BGbutton(onclick='openDiv("Bridesmaids"); closeDiv("Groomsmen")') Bridesmaids
+		<br>
+		.BGbutton(onclick='openDiv("Groomsmen");  closeDiv("Bridesmaids")') Groomsmen
 
-		img(class='img-square' src='http://i.imgur.com/ayMU8Mo.jpg') 
-		img(class='img-circle' src='http://i.imgur.com/GwEU016.jpg') 
-		img(class='img-square' src='http://i.imgur.com/xSMPzi1.jpg') 
-		img(class='img-circle' src='http://i.imgur.com/B1wq4iV.jpg') 
-		img(class='img-square' src='http://i.imgur.com/7HBUA7Q.jpg') 
-		img(class='img-circle' src='http://i.imgur.com/mfzsMrQ.jpg') 
-		img(class='img-square' src='http://i.imgur.com/Bh5PfIb.jpg') 
-		img(class='img-circle' src='http://i.imgur.com/G6KGLYx.jpg') 
-		img(class='img-square' src='http://i.imgur.com/aN4VZgd.jpg')
-		img(class='img-circle' src='http://i.imgur.com/9gtsdFk.jpg')  
-		img(class='img-square' src='http://i.imgur.com/oiNYkky.jpg') 
-		img(class='img-circle' src='http://i.imgur.com/fN6W4HT.jpg') 
-		img(class='img-square' src='http://i.imgur.com/zuYdzVx.jpg')
-		img(class='img-circle' src='http://i.imgur.com/WVxvcMG.jpg') 
-		img(class='img-square' src='http://i.imgur.com/IcZUNgM.jpg') 
-		img(class='img-circle' src='http://i.imgur.com/dxMJ43q.jpg') 
-		img(class='img-square' src='http://i.imgur.com/yV8uqyR.jpg') 
+		#Groomsmen.transBoxParty
 
+			img(class='img-square' src='http://i.imgur.com/ayMU8Mo.jpg') 
+			img(class='img-square' src='http://i.imgur.com/xSMPzi1.jpg') 
+			img(class='img-square' src='http://i.imgur.com/7HBUA7Q.jpg') 
+			img(class='img-square' src='http://i.imgur.com/Bh5PfIb.jpg') 
+			img(class='img-square' src='http://i.imgur.com/aN4VZgd.jpg')
+			img(class='img-square' src='http://i.imgur.com/oiNYkky.jpg') 
+			img(class='img-square' src='http://i.imgur.com/zuYdzVx.jpg')
+			img(class='img-square' src='http://i.imgur.com/IcZUNgM.jpg') 
+			img(class='img-square' src='http://i.imgur.com/yV8uqyR.jpg') 
+
+		#Bridesmaids.transBoxParty
+
+			img(class='img-circle' src='http://i.imgur.com/GwEU016.jpg') 
+			img(class='img-circle' src='http://i.imgur.com/B1wq4iV.jpg') 
+			img(class='img-circle' src='http://i.imgur.com/mfzsMrQ.jpg') 
+			img(class='img-circle' src='http://i.imgur.com/G6KGLYx.jpg') 
+			img(class='img-circle' src='http://i.imgur.com/9gtsdFk.jpg')  
+			img(class='img-circle' src='http://i.imgur.com/fN6W4HT.jpg') 
+			img(class='img-circle' src='http://i.imgur.com/WVxvcMG.jpg') 
+			img(class='img-circle' src='http://i.imgur.com/dxMJ43q.jpg') 
+
+
+
+		
 			
-		</div>
 
 			
 
