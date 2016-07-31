@@ -8,14 +8,30 @@ html
     script(src='/js/dialog.js')
 
     script.
-        function openNav(name) {
-          document.getElementById(name).style.width = "60%";
-          }
           function closeNav(name) {
-          document.getElementById(name).style.width = "0%";
+            document.getElementById(name).style.width = "0%";
           }
+          function openNav(name) {
+            if (name === "aboutUs") {
+              closeNav("ourStory");
+              document.getElementById(name).style.width = "60%";
+            } else if (name === "ourStory") {
+              closeNav("aboutUs");
+              document.getElementById(name).style.width = "60%";
+            }
+          }
+          
+
+
 
   body
+  ul.navTOP
+        li: a(href='/') Home
+        li: a(href='/theBigDay') The Wedding
+        li: a(href='/party') Wedding Party
+        li: a(href='/giftRegistry') Registry
+        li: a(href='/RSVP') RSVP
+        li: a(href='/Travels') Our Travels
 
 
   .header-homepage
@@ -48,14 +64,6 @@ html
                 p Jeffrey and Tiffanie are thrilled to share this special day with friends and family.
             
             
-      ul.nav
-        li: a(href='/') Home
-        li: a(href='/theBigDay') The Wedding
-        li: a(href='/party') Wedding Party
-        li: a(href='/giftRegistry') Registry
-        li: a(href='/RSVP') RSVP
-        li: a(href='/Travels') Our Travels
-
 
     
 
