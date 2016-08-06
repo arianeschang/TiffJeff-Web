@@ -5,9 +5,11 @@ body {
 }
 
 #holder_570 {
-    height: 250px;
-    width: 570px;
-    margin: 2em auto;
+    height: 600px;
+    width: 60%;
+    margin: auto;
+    display:block;
+
 }
 #holder_1000 {
     margin: 0 auto;
