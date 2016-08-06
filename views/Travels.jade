@@ -111,6 +111,22 @@ html
       city_box = city;
       };
 
+      $('body').click(function(e){
+            if($(e.target).hasClass("carousel-control"))
+            {
+            }
+            else{
+                  $("#China").hide();
+                  $("#Prague").hide();
+                  $("#Amsterdam").hide();
+                  $("#USNationalParks").hide();
+                  $("#Canada").hide();
+                  $("#France").hide();
+                  $("#Hawaii").hide();
+            }
+      });
+
+
 
 
       if (t = document.getElementById(city)) {
@@ -184,15 +200,13 @@ html
               // Wrapper for slides
               .carousel-inner(role='listbox')
                 .item.active
-                  img(src='photos/China1.jpeg')
+                  img(src='photos/Prague 1.jpg')
                 .item
-                  img(src='photos/china2.jpeg')
+                  img(src='photos/Prague 2.jpg')
                 .item
-                  img(src='photos/china3.jpeg')
+                  img(src='photos/Prague 3.jpg')
                 .item
-                  img(src='photos/chinaKiss.jpeg')
-                .item
-                  img(src='photos/chinaWall.jpeg')
+                  img(src='photos/Prague 4.jpg')
               // Left and right controls
               a.left.carousel-control(href='#myCarousel1', role='button', data-slide='prev')
                 span.glyphicon.glyphicon-chevron-left(aria-hidden='true')
@@ -209,19 +223,14 @@ html
                 li.active(data-target='#myCarousel2', data-slide-to='0')
                 li(data-target='#myCarousel2', data-slide-to='1')
                 li(data-target='#myCarousel2', data-slide-to='2')
-                li(data-target='#myCarousel2', data-slide-to='3')
               // Wrapper for slides
               .carousel-inner(role='listbox')
                 .item.active
-                  img(src='photos/China1.jpeg')
+                  img(src='photos/Amsterdam 1.jpg')
                 .item
-                  img(src='photos/china2.jpeg')
+                  img(src='photos/Amsterdam 2.jpg')
                 .item
-                  img(src='photos/china3.jpeg')
-                .item
-                  img(src='photos/chinaKiss.jpeg')
-                .item
-                  img(src='photos/chinaWall.jpeg')
+                  img(src='photos/Amsterdam 3.jpg')
               // Left and right controls
               a.left.carousel-control(href='#myCarousel2', role='button', data-slide='prev')
                 span.glyphicon.glyphicon-chevron-left(aria-hidden='true')
@@ -246,6 +255,8 @@ html
                   img(src='photos/France2.JPG')
                 .item
                   img(src='photos/France3.JPG')
+                .item
+                  img(src='photos/France 5.jpg')
               // Left and right controls
               a.left.carousel-control(href='#myCarousel3', role='button', data-slide='prev')
                 span.glyphicon.glyphicon-chevron-left(aria-hidden='true')
@@ -293,19 +304,22 @@ html
                 li(data-target='#myCarousel5', data-slide-to='2')
                 li(data-target='#myCarousel5', data-slide-to='3')
                 li(data-target='#myCarousel5', data-slide-to='4')
+                li(data-target='#myCarousel5', data-slide-to='5')
 
               // Wrapper for slides
               .carousel-inner(role='listbox')
+                .item
+                  img(src='photos/Grand Canyon.jpg')
                 .item.active
-                  img(src='photos/natlPark1.jpeg')
-                .item
                   img(src='photos/natlPark2.jpeg')
-                .item
-                  img(src='photos/natlpark3.jpeg')
                 .item
                   img(src='photos/natlPark4.jpeg')
                 .item
                   img(src='photos/natlpark5.jpeg')
+                .item
+                  img(src='photos/Yellowstone 2.jpg')
+                .item
+                  img(src='photos/Lake Powell 2.jpg')
               // Left and right controls
               a.left.carousel-control(href='#myCarousel5', role='button', data-slide='prev')
                 span.glyphicon.glyphicon-chevron-left(aria-hidden='true')
@@ -321,20 +335,12 @@ html
               ol.carousel-indicators
                 li.active(data-target='#myCarousel6', data-slide-to='0')
                 li(data-target='#myCarousel6', data-slide-to='1')
-                li(data-target='#myCarousel6', data-slide-to='2')
-                li(data-target='#myCarousel6', data-slide-to='3')
               // Wrapper for slides
               .carousel-inner(role='listbox')
                 .item.active
-                  img(src='photos/China1.jpeg')
+                  img(src='photos/Hawaii 1.jpg')
                 .item
-                  img(src='photos/china2.jpeg')
-                .item
-                  img(src='photos/china3.jpeg')
-                .item
-                  img(src='photos/chinaKiss.jpeg')
-                .item
-                  img(src='photos/chinaWall.jpeg')
+                  img(src='photos/Hawaii 2.jpg')
               // Left and right controls
               a.left.carousel-control(href='#myCarousel6', role='button', data-slide='prev')
                 span.glyphicon.glyphicon-chevron-left(aria-hidden='true')
