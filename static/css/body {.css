@@ -4,9 +4,10 @@ body {
     font: 100.1% "Lucida Grande", Lucida, Verdana, sans-serif;
 }
 #holder {
-    height: 700px;
-    margin: 0 0 0 0px;
+    height: 480px;
+    left: 50%;
+    margin: 0 0 0 -320px;
     position: absolute;
     top: 0;
-    width: 1000px;
+    width: 640px;
 }
