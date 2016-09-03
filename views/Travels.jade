@@ -21,39 +21,7 @@ html
       margin: auto;
       }
 
-    script(type='text/javascript').
-      $(function() {
-          var photos = [
-        { thumbnail: '0-thumbnail.jpg', large: '0-large.jpg' },
-        { thumbnail: '1-thumbnail.jpg', large: '1-large.jpg' },
-        { thumbnail: '2-thumbnail.jpg', large: '2-large.jpg' }
-      ];
     
-      var thumbnails = $('#thumbnails'),
-        large = $('#large');    
-      
-      // add thumbnails
-      var imgs = [];
-      $.each(photos, function(index, photo) {
-        var thumbnail = $('<img>')
-            .prop('src', photo.thumbnail)
-              .prop('alt', index)
-            .data(photo);
-        imgs.push(thumbnail);
-      });
-      thumbnails.append(imgs);
-      
-      // listen for thumbnail clicks
-      thumbnails.on('click', 'img', function() {
-        $('img', large).attr('src', $(this).data().large);
-      });
-      
-      // add large photo
-      var img = $('<img>')
-          .prop('src', photos[0].large)
-          .prop('alt', 'large');
-      large.append(img);
-      }); 
 
 
     script(type='text/javascript').
@@ -354,19 +322,19 @@ html
 
     #div(style='float:center' margin:'0px auto')
       .thumbnails
-        img(onmouseover='preview.src=img1.src', name='img1', src='photos/PHOTOS/4420.JPG', alt='', height='70px', style="PADDING-RIGHT: 5px") 
-        img(onmouseover='preview.src=img2.src', name='img2', src='photos/PHOTOS/4452.JPG', alt='', height='70px', style="PADDING-RIGHT: 5px")
-        img(onmouseover='preview.src=img5.src', name='img5', src='photos/PHOTOS/photo.JPG', alt='', height='70px', style="PADDING-RIGHT: 5px")
-        img(onmouseover='preview.src=img6.src', name='img6', src='photos/PHOTOS/photo(1).JPG', alt='', height='70px', style="PADDING-RIGHT: 5px")
-        img(onmouseover='preview.src=img10.src', name='img10', src='photos/PHOTOS/photo(4).JPG', alt='', height='70px', style="PADDING-RIGHT: 5px")
-        img(onmouseover='preview.src=img11.src', name='img11', src='photos/PHOTOS/photo(5).JPG', alt='', height='70px', style="PADDING-RIGHT: 5px")
-        img(onmouseover='preview.src=img12.src', name='img12', src='photos/PHOTOS/photo(6).JPG', alt='', height='70px', style="PADDING-RIGHT: 5px")
-        img(onmouseover='preview.src=img13.src', name='img13', src='photos/PHOTOS/photo(7).JPG', alt='', height='70px', style="PADDING-RIGHT: 5px")
-        img(onmouseover='preview.src=img3.src', name='img3', src='photos/PHOTOS/4506.JPG', alt='', height='70px', style="PADDING-RIGHT: 5px")
+        img(onmouseover='preview.src=img1.src', name='img1', src='photos/PHOTOS/4420.JPG', alt='', height='70px') 
+        img(onmouseover='preview.src=img2.src', name='img2', src='photos/PHOTOS/4452.JPG', alt='', height='70px')
+        img(onmouseover='preview.src=img5.src', name='img5', src='photos/PHOTOS/photo.JPG', alt='', height='70px')
+        img(onmouseover='preview.src=img6.src', name='img6', src='photos/PHOTOS/photo(1).JPG', alt='', height='70px')
+        img(onmouseover='preview.src=img10.src', name='img10', src='photos/PHOTOS/photo(4).JPG', alt='', height='70px')
+        img(onmouseover='preview.src=img11.src', name='img11', src='photos/PHOTOS/photo(5).JPG', alt='', height='70px')
+        img(onmouseover='preview.src=img12.src', name='img12', src='photos/PHOTOS/photo(6).JPG', alt='', height='70px')
+        img(onmouseover='preview.src=img13.src', name='img13', src='photos/PHOTOS/photo(7).JPG', alt='', height='70px')
+        img(onmouseover='preview.src=img3.src', name='img3', src='photos/PHOTOS/4506.JPG', alt='', height='70px')
 
-        img(onmouseover='preview.src=img14.src', name='img14', src='photos/PHOTOS/photo(8).JPG', alt='', height='70px', style="PADDING-RIGHT: 5px")
-        img(onmouseover='preview.src=img15.src', name='img15', src='photos/PHOTOS/photo(9).JPG', alt='', height='70px', style="PADDING-RIGHT: 5px")
-        img(onmouseover='preview.src=img16.src', name='img16', src='photos/PHOTOS/photo(10).JPG', alt='', height='70px', style="PADDING-RIGHT: 5px")
+        img(onmouseover='preview.src=img14.src', name='img14', src='photos/PHOTOS/photo(8).JPG', alt='', height='70px')
+        img(onmouseover='preview.src=img15.src', name='img15', src='photos/PHOTOS/photo(9).JPG', alt='', height='70px')
+        img(onmouseover='preview.src=img16.src', name='img16', src='photos/PHOTOS/photo(10).JPG', alt='', height='70px')
       br
       .preview(align='center')
         img(name='preview', src='photos/PHOTOS/4420.JPG', alt='', height='400px')
