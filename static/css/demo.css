@@ -5,18 +5,12 @@ body {
 }
 
 #holder_570 {
-    height: 500px;
-    width: 570px;
-    left: 20px;
-    display:block;
-    position: absolute;
-    float:left;
-    border-style: solid;
-    border-color: rgb(22,72,131);
-    border-top: white;
-    border-left: white;
-    border-bottom: white;
-
+    height: 270px;
+    width: 500px;
+    left: -30px;
+    display:inline-block;
+    position: relative;
+    float:center;
 }
 
 

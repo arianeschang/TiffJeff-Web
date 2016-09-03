@@ -21,6 +21,40 @@ html
       margin: auto;
       }
 
+    script(type='text/javascript').
+      $(function() {
+          var photos = [
+        { thumbnail: '0-thumbnail.jpg', large: '0-large.jpg' },
+        { thumbnail: '1-thumbnail.jpg', large: '1-large.jpg' },
+        { thumbnail: '2-thumbnail.jpg', large: '2-large.jpg' }
+      ];
+    
+      var thumbnails = $('#thumbnails'),
+        large = $('#large');    
+      
+      // add thumbnails
+      var imgs = [];
+      $.each(photos, function(index, photo) {
+        var thumbnail = $('<img>')
+            .prop('src', photo.thumbnail)
+              .prop('alt', index)
+            .data(photo);
+        imgs.push(thumbnail);
+      });
+      thumbnails.append(imgs);
+      
+      // listen for thumbnail clicks
+      thumbnails.on('click', 'img', function() {
+        $('img', large).attr('src', $(this).data().large);
+      });
+      
+      // add large photo
+      var img = $('<img>')
+          .prop('src', photos[0].large)
+          .prop('alt', 'large');
+      large.append(img);
+      }); 
+
 
     script(type='text/javascript').
 
@@ -152,15 +186,16 @@ html
   .header
     ul.navTOP
       li: a(href='/') Home
-      li: a(href='/theBigDay') The Wedding
+      li: a(href='/theBigDay') Details
       li: a(href='/party') Wedding Party
       li: a(href='/giftRegistry') Gift Registry
       li: a(href='/RSVP') RSVP
-      li: a(href='/Travels') Our Travels
+      li: a(href='/Travels') Photos
 
 
- .main-content-wide
-    h1.aTitle Our Travels 
+ .main-content(style='width:90%;')
+    h1.aTitle(style='padding-bottom: 0px;') Photos
+    h1.sub-title(style='font-size: 20px;') Hover over the green location dots to see photos of our travels
 
     #holder_570(style='position:relative;')
       #China.city_hover
@@ -262,15 +297,15 @@ html
               // Wrapper for slides
               .carousel-inner(role='listbox')
                 .item.active
-                  img(src='photos/China1.jpeg')
+                  img(src='photos/Canada 3.jpg')
                 .item
-                  img(src='photos/china2.jpeg')
+                  img(src='photos/Canada1.jpg')
                 .item
-                  img(src='photos/china3.jpeg')
+                  img(src='photos/Canada2.jpg')
                 .item
-                  img(src='photos/chinaKiss.jpeg')
+                  img(src='photos/Canda 5.jpg')
                 .item
-                  img(src='photos/chinaWall.jpeg')
+                  img(src='photos/Canda4.jpg')
  
       #USNationalParks.city_hover
         span.c_label
@@ -315,8 +350,27 @@ html
                 .item
                   img(src='photos/Hawaii 2.jpg')
 
-    #photoCarousel
-      p hey whatsup 
+
+
+    #div(style='float:center' margin:'0px auto')
+      .thumbnails
+        img(onmouseover='preview.src=img1.src', name='img1', src='photos/PHOTOS/4420.JPG', alt='', height='70px', style="PADDING-RIGHT: 5px") 
+        img(onmouseover='preview.src=img2.src', name='img2', src='photos/PHOTOS/4452.JPG', alt='', height='70px', style="PADDING-RIGHT: 5px")
+        img(onmouseover='preview.src=img5.src', name='img5', src='photos/PHOTOS/photo.JPG', alt='', height='70px', style="PADDING-RIGHT: 5px")
+        img(onmouseover='preview.src=img6.src', name='img6', src='photos/PHOTOS/photo(1).JPG', alt='', height='70px', style="PADDING-RIGHT: 5px")
+        img(onmouseover='preview.src=img10.src', name='img10', src='photos/PHOTOS/photo(4).JPG', alt='', height='70px', style="PADDING-RIGHT: 5px")
+        img(onmouseover='preview.src=img11.src', name='img11', src='photos/PHOTOS/photo(5).JPG', alt='', height='70px', style="PADDING-RIGHT: 5px")
+        img(onmouseover='preview.src=img12.src', name='img12', src='photos/PHOTOS/photo(6).JPG', alt='', height='70px', style="PADDING-RIGHT: 5px")
+        img(onmouseover='preview.src=img13.src', name='img13', src='photos/PHOTOS/photo(7).JPG', alt='', height='70px', style="PADDING-RIGHT: 5px")
+        img(onmouseover='preview.src=img3.src', name='img3', src='photos/PHOTOS/4506.JPG', alt='', height='70px', style="PADDING-RIGHT: 5px")
+
+        img(onmouseover='preview.src=img14.src', name='img14', src='photos/PHOTOS/photo(8).JPG', alt='', height='70px', style="PADDING-RIGHT: 5px")
+        img(onmouseover='preview.src=img15.src', name='img15', src='photos/PHOTOS/photo(9).JPG', alt='', height='70px', style="PADDING-RIGHT: 5px")
+        img(onmouseover='preview.src=img16.src', name='img16', src='photos/PHOTOS/photo(10).JPG', alt='', height='70px', style="PADDING-RIGHT: 5px")
+      br
+      .preview(align='center')
+        img(name='preview', src='photos/PHOTOS/4420.JPG', alt='', height='400px')
+
 
 
       

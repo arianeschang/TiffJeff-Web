@@ -159,6 +159,21 @@ body {
 .btn3 li {
   display: inline-block;
 }
+.frenchButton {
+  cursor: pointer;
+  position:absolute;
+  float:right;
+  color: #164883;
+  border: 3px solid rgba(22,72,131,0.5);
+  background: rgba(255,255,255,0.5);
+  cursor: pointer;
+  display: block;
+  font-family: 'Raleway';
+  top:65%;
+
+}
+
+
 .header-wedding {
   background: url("http://michellejohnsonphotography.com/blog/wp-content/uploads/2014/06/06maliboulakemountainclubweddingpictures.jpg");
   background-size: cover;
@@ -431,6 +446,7 @@ img {
 }
 .closebtn {
   position: absolute;
+  left:1px;
   top: 5px;
   right: 60px;
   font-size: 60px !important;
@@ -480,4 +496,22 @@ h1.sub-title {
   font-size: 30px;
   color: #ff6b5f;
   font-family: 'Raleway';
+}
+
+.thumbnails img {
+  height: 80px;
+  border: 4px solid #555;
+  padding: 1px;
+  margin: 0 10px 10px 0;
+}
+
+.thumbnails img:hover {
+  border: 4px solid #00ccff;
+  cursor:pointer;
+}
+
+.preview img {
+  border: 4px solid #444;
+  padding: 1px;
+  width: 800px;
 }
