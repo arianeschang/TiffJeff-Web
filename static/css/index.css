@@ -179,7 +179,7 @@ body {
   font-size: 80px;
   color: #164883;
   font-family: 'Parisienne';
-  padding-bottom: 20px;
+  padding-bottom: 10px;
 }
 .main-content .sub-title {
   text-align: center;
@@ -254,10 +254,23 @@ h4 {
   font-size: 22px;
   font-family: 'Raleway';
 }
+h3 {
+  line-height: 20px;
+  text-align: center;
+  color: #164883;
+  font-size: 18px;
+  font-family: 'Raleway';
+}
 p {
   text-align: center;
   color: #000;
   font-size: 18px;
+  font-family: 'Raleway';
+}
+psmall {
+  text-align: center;
+  color: #000;
+  font-size: 14px;
   font-family: 'Raleway';
 }
 img {
@@ -383,7 +396,7 @@ img {
 }
 .overlay-content {
   position: relative;
-  top: 25%;
+  top: 0%;
   width: 100%;
   text-align: center;
   margin-top: 30px;
@@ -416,9 +429,13 @@ img {
 }
 .closebtn {
   position: absolute;
-  top: 20px;
   right: 45px;
-  font-size: 60px !important;
+  font-size: 60px;
+}
+.frenchButton {
+  position: absolute;
+  left: 0px;
+  font-size: 20px;
 }
 @media screen and (max-height: 450px) {
   .overlay a {
