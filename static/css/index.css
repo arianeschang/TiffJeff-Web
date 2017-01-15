@@ -237,9 +237,9 @@ body {
 }
 #plus {
   font-family: Raleway;
-  font-weight: 400;
+  font-weight: 200;
   color: rgba(255,255,255,0.85);
-  font-size: 40px;
+  font-size: 18px;
 }
 .transbox {
   background-color: #fff;
